@@ -1,0 +1,2 @@
+# Google Analytics Code
+WordpressのGoogleアナリティクスコードを埋め込むだけのプラグイン
