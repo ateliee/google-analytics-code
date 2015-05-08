@@ -51,7 +51,7 @@ class GoogleAnalyticsCode {
         //$_POST['showtext_options'])があったら保存
         if ( isset($_POST[self::$OPTIONS_ID])) {
             check_admin_referer('shoptions');
-            $opt = $_POST[self::$OPTIONS_ID];
+            $opt = stripslashes_deep($_POST[self::$OPTIONS_ID]);
             update_option(self::$OPTIONS_ID, $opt);
             ?><div class="updated fade"><p><strong><?php _e('Options saved.'); ?></strong></p></div><?php
         }
@@ -66,7 +66,7 @@ class GoogleAnalyticsCode {
                 <table class="form-table">
                     <tr valign="top">
                         <th scope="row"><label for="inputtext">アナリティクスコード</label></th>
-                        <td><textarea name="<?php print self::$OPTIONS_ID; ?>[code]" class="large-text code"><?php  echo $show_text ?></textarea></td>
+                        <td><textarea name="<?php print self::$OPTIONS_ID; ?>[code]" class="large-text code"><?php echo esc_textarea($show_text); ?></textarea></td>
                     </tr>
                 </table>
                 <p class="submit"><input type="submit" name="Submit" class="button-primary" value="変更を保存" /></p>
