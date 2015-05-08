@@ -66,7 +66,7 @@ class GoogleAnalyticsCode {
                 <table class="form-table">
                     <tr valign="top">
                         <th scope="row"><label for="inputtext">アナリティクスコード</label></th>
-                        <td><textarea name="<?php print self::$OPTIONS_ID; ?>[code]" class="large-text code"><?php echo esc_textarea($show_text); ?></textarea></td>
+                        <td><textarea name="<?php print self::$OPTIONS_ID; ?>[code]" class="large-text code" rows="20"><?php echo esc_textarea($show_text); ?></textarea></td>
                     </tr>
                 </table>
                 <p class="submit"><input type="submit" name="Submit" class="button-primary" value="変更を保存" /></p>
