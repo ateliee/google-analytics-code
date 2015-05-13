@@ -22,7 +22,8 @@ class GoogleAnalyticsCode {
      *
      */
     public function add_pages() {
-        add_menu_page('Google Analytics','Google Analytics',  'level_8', __FILE__, array($this,'show_text_option_page'), '', 26);
+        add_options_page( 'Google Analytics', 'Google Analytics', 'level_8',__FILE__, array($this,'show_text_option_page'), '');
+//        add_menu_page('Google Analytics','Google Analytics',  'level_8', __FILE__, array($this,'show_text_option_page'), '', 26);
     }
 
     /**
